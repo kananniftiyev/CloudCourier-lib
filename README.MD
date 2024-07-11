@@ -1,7 +1,5 @@
 # CloudCourier - Lib 📚
 
-# CloudCourier - Lib 📚
-
 CloudCourier - Lib is a library designed for sharing common code between microservices in the CloudCourier Project.
 
 ## Features
