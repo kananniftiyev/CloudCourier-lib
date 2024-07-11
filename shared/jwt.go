@@ -18,7 +18,10 @@ type CustomClaims struct {
 	// Add other custom claims as needed
 }
 
-// JWTTokenVerifyMiddleware is a middleware function for verifying JWT tokens
+// JWTTokenVerifyMiddleware is a middleware function that verifies the JWT token from the request cookie.
+// It checks if the token is valid and attaches the token claims to the request context.
+// If the token is invalid or the claims cannot be retrieved, it returns an error response.
+// The next handler is called if the token is valid.
 func JWTTokenVerifyMiddleware(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		// Retrieve the JWT token from the cookie
